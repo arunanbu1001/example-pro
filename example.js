@@ -33,3 +33,23 @@ if(a[i]=="@")
     console.log(x);
     console.log(y);
 }
+
+
+// ==================================================
+
+function myFunction()
+{
+  var myString = document.getElementById("str").innerHTML;
+  var myWord = document.getElementById("txt1").value;
+  var myPattern = new RegExp('.'+myWord,'g');
+
+  var myResult = myString.split(" ");
+
+  for(var i=0; i<myResult.length; i++) {
+    var result = myResult[i].match(myPattern);
+    if(result) break;
+  }
+
+  document.getElementById("demo").innerHTML = myResult;
+
+}
